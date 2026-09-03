@@ -13,3 +13,4 @@ export 'src/grid_state_widgets.dart'
         DefaultGridErrorWidget,
         DefaultGridLoadingWidget;
 export 'src/responsive_grid_view.dart';
+export 'src/responsive_masonry_grid_view.dart';

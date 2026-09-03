@@ -1,3 +1,17 @@
+## 0.0.2
+
+* `ResponsiveMasonryGridView.builder` — staggered ("masonry" / Pinterest-style)
+  grid. Each item keeps its own natural height and is packed into whichever
+  column is currently shortest, instead of a uniform tile size.
+* Column count for the masonry grid resolves the same way as
+  `ResponsiveGridView`: `minColumnWidth` (auto mode) or `breakpoints`
+  (breakpoint mode), clamped by `minColumns`/`maxColumns`.
+* Same built-in loading / empty / error states, `itemSpacing`/`rowSpacing`,
+  `padding`, and `shrinkWrap` support as `ResponsiveGridView`.
+* Layout is eager (not lazy) — every item is measured to compute its
+  placement — so it suits moderate item counts (a feed, a gallery section),
+  not very long or infinite lists. Use `ResponsiveGridView` for those.
+
 ## 0.0.1
 
 Initial release.

@@ -2,7 +2,11 @@
 
 # dash_responsive_grid
 
-A Flutter grid that picks its own column count from screen width — no `LayoutBuilder`, no breakpoint math. Zero dependencies.
+A Flutter grid that picks its own column count from screen width — no `LayoutBuilder`, no breakpoint math. Includes a staggered ("masonry") layout for unevenly sized tiles. Zero dependencies.
+
+| Vertical | Horizontal | Masonry |
+|---|---|---|
+| ![Vertical grid](screenshots/vertical.png) | ![Horizontal grid](screenshots/horizontal.png) | ![Masonry grid](screenshots/masonry.png) |
 
 ## Install
 
@@ -53,6 +57,27 @@ SizedBox(
 )
 ```
 
+### Masonry (staggered) layout
+
+Items keep their own natural height instead of a uniform tile size — each
+is packed into whichever column is currently shortest:
+
+```dart
+ResponsiveMasonryGridView.builder(
+  itemCount: items.length,
+  minColumnWidth: 160,
+  itemSpacing: 12,
+  rowSpacing: 12,
+  itemBuilder: (context, index) => MyCard(items[index]),
+)
+```
+
+Same column-count resolution (`minColumnWidth`/`breakpoints`), spacing,
+padding, and loading/empty/error handling as `ResponsiveGridView`. Layout
+is eager (every item is measured to compute its placement), so it's a
+good fit for a feed or gallery section — not for very long or infinite
+lists; use `ResponsiveGridView` for those.
+
 ## Key parameters
 
 | Parameter | What it does |
@@ -65,7 +90,7 @@ SizedBox(
 | `isLoading` / `hasError` / `loadingBuilder` / `emptyBuilder` / `errorBuilder` | state handling |
 | `scrollDirection` | `Axis.vertical` (default) or `Axis.horizontal` |
 
-Full list in the dartdoc on `ResponsiveGridView`. Runnable demo: [`example/`](example/).
+Full list in the dartdoc on `ResponsiveGridView` / `ResponsiveMasonryGridView`. Runnable demo: [`example/`](example/).
 
 ## Bugs & Credits
 
