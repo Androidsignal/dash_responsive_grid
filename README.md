@@ -94,4 +94,4 @@ Full list in the dartdoc on `ResponsiveGridView` / `ResponsiveMasonryGridView`. 
 
 ## Bugs & Credits
 
-Report bugs and ask questions on [GitHub Issues](https://github.com/dashstack/dash_responsive_grid/issues). Maintained by [Dashstack Infotech, Surat](https://www.dashstack.tech/).
+Report bugs and ask questions on [GitHub Issues](https://github.com/Androidsignal/dash_responsive_grid/issues). Maintained by [Dashstack Infotech, Surat](https://www.dashstack.tech/).

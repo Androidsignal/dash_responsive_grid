@@ -1,9 +1,9 @@
 name: dash_responsive_grid
 description: "Lightweight, dependency-free responsive grid for Flutter. Auto column count by screen width, a staggered masonry layout, and loading/empty/error states."
 version: 0.0.2
-homepage: https://github.com/dashstack/dash_responsive_grid
-repository: https://github.com/dashstack/dash_responsive_grid
-issue_tracker: https://github.com/dashstack/dash_responsive_grid/issues
+homepage: https://github.com/Androidsignal/dash_responsive_grid
+repository: https://github.com/Androidsignal/dash_responsive_grid
+issue_tracker: https://github.com/Androidsignal/dash_responsive_grid/issues
 topics:
   - grid
   - responsive
